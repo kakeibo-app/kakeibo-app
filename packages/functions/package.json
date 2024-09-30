@@ -1,0 +1,17 @@
+{
+  "name": "@kakeibo-app/functions",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "./*": [
+      "./src/*/index.ts",
+      "./src/*.ts"
+    ]
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4"
+  },
+  "dependencies": {
+    "hono": "^4.6.3"
+  }
+}

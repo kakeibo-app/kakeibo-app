@@ -1,0 +1,13 @@
+{
+  "name": "@kakeibo-app/core",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    "./*.sql": "./src/*.sql.ts",
+    "./*.ts": "./src/*.ts",
+    "./*": "./src/*.ts"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4"
+  }
+}
