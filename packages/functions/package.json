@@ -8,6 +8,9 @@
       "./src/*.ts"
     ]
   },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4"
   },

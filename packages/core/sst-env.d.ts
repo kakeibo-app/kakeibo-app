@@ -5,6 +5,10 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
+    "NeonDatabaseUrl": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "api": {
       "name": string
       "type": "sst.aws.Function"
