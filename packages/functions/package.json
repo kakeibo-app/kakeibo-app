@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "exports": {
+    "./*.ts": "./src/*.ts",
     "./*": [
       "./src/*/index.ts",
       "./src/*.ts"
@@ -15,6 +16,7 @@
     "@tsconfig/node20": "^20.1.4"
   },
   "dependencies": {
-    "hono": "^4.6.3"
+    "hono": "^4.6.3",
+    "@kakeibo-app/core": "workspace:*"
   }
 }
