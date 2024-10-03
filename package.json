@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "sst dev",
-    "sso": "aws sso login --sso-session=sso-session"
+    "sso": "aws sso login --sso-session=sso-session",
+    "typecheck": "pnpm -r typecheck",
+    "db:generate": "pnpm --filter core db:generate",
+    "db:migrate": "pnpm --filter core db:migrate",
+    "db:studio": "pnpm --filter core db:studio"
   },
   "workspaces": [
     "packages/*"
