@@ -5,6 +5,14 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
+    "GoogleClientId": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
+    "GoogleClientSecret": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "NeonDatabaseUrl": {
       "type": "sst.sst.Secret"
       "value": string
@@ -12,6 +20,10 @@ declare module "sst" {
     "api": {
       "name": string
       "type": "sst.aws.Function"
+      "url": string
+    }
+    "web": {
+      "type": "sst.aws.StaticSite"
       "url": string
     }
   }
