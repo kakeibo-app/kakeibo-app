@@ -5,11 +5,7 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
-    "GoogleClientId": {
-      "type": "sst.sst.Secret"
-      "value": string
-    }
-    "GoogleClientSecret": {
+    "ClerkPublishableKey": {
       "type": "sst.sst.Secret"
       "value": string
     }
