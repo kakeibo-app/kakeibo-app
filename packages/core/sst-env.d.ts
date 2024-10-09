@@ -5,6 +5,10 @@ import "sst"
 export {}
 declare module "sst" {
   export interface Resource {
+    "ClerkPublishableKey": {
+      "type": "sst.sst.Secret"
+      "value": string
+    }
     "NeonDatabaseUrl": {
       "type": "sst.sst.Secret"
       "value": string
@@ -12,6 +16,10 @@ declare module "sst" {
     "api": {
       "name": string
       "type": "sst.aws.Function"
+      "url": string
+    }
+    "web": {
+      "type": "sst.aws.StaticSite"
       "url": string
     }
   }
