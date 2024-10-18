@@ -18,16 +18,9 @@ if (!CLERK_PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <MantineProvider defaultColorScheme="dark">
-        <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY}>
-          <App />
-        </ClerkProvider>
-      </MantineProvider>
-    </BrowserRouter>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-        <MantineProvider>
+        <MantineProvider defaultColorScheme="dark">
           <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY}>
             <App />
           </ClerkProvider>

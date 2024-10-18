@@ -151,7 +151,7 @@ export default function Dashboard() {
                 radius="md"
                 style={{ borderLeft: "4px violet solid" }}
               >
-                <Text size="lg">Total Balance</Text>
+                <Text size="sm">Total Balance</Text>
                 <Text size="xl" fw={700} c={"violet"}>
                   $5,750.53
                 </Text>
