@@ -3,8 +3,12 @@ import { createRoot } from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { MantineProvider } from "@mantine/core";
 import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import App from "./App.tsx";
 import "@mantine/core/styles.css";
+
+const queryClient = new QueryClient();
 
 const CLERK_PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -14,12 +18,15 @@ if (!CLERK_PUBLISHABLE_KEY) {
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <MantineProvider>
-        <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY}>
-          <App />
-        </ClerkProvider>
-      </MantineProvider>
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <MantineProvider defaultColorScheme="dark">
+          <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY}>
+            <App />
+          </ClerkProvider>
+        </MantineProvider>
+      </BrowserRouter>
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
   </StrictMode>
 );
